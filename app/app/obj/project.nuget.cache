@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "epyVNsm4+4JdZ2U9GenzJOvDptM6sePC5JbuYxKRRuOUDFUscq7RGun2JX7Eih/ij63NtCPR72z2v2sLyqboUQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sheha\\source\\repos\\app\\app\\app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sheha\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.116\\stub.system.data.sqlite.core.netstandard.1.0.116.nupkg.sha512",
+    "C:\\Users\\sheha\\.nuget\\packages\\system.data.sqlite.core\\1.0.116\\system.data.sqlite.core.1.0.116.nupkg.sha512"
+  ],
+  "logs": []
+}
