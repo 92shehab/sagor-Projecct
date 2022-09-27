@@ -53,6 +53,21 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.memoid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopid1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memodate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donumber1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productquantity1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producttype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitprice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.truckcost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.othercost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalcost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cashreceive1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duebalance1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dueflag1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -74,21 +89,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.memoid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopid1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memodate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donumber1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productquantity1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producttype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitprice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.truckcost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.othercost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalcost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cashreceive1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duebalance1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dueflag1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -266,7 +266,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Ivory;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(427, 677);
+            this.button1.Location = new System.Drawing.Point(427, 640);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 32);
             this.button1.TabIndex = 19;
@@ -351,8 +351,85 @@
             this.dataGridView1.Location = new System.Drawing.Point(577, 222);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(657, 487);
+            this.dataGridView1.Size = new System.Drawing.Size(657, 450);
             this.dataGridView1.TabIndex = 23;
+            // 
+            // memoid
+            // 
+            this.memoid.HeaderText = "Memo ID";
+            this.memoid.Name = "memoid";
+            // 
+            // shopid1
+            // 
+            this.shopid1.HeaderText = "Shop ID";
+            this.shopid1.Name = "shopid1";
+            this.shopid1.Visible = false;
+            // 
+            // shopname1
+            // 
+            this.shopname1.HeaderText = "Company Name";
+            this.shopname1.Name = "shopname1";
+            // 
+            // memodate1
+            // 
+            this.memodate1.HeaderText = "Memo Date";
+            this.memodate1.Name = "memodate1";
+            // 
+            // donumber1
+            // 
+            this.donumber1.HeaderText = "D.O Number";
+            this.donumber1.Name = "donumber1";
+            // 
+            // productquantity1
+            // 
+            this.productquantity1.HeaderText = "Product Quantity";
+            this.productquantity1.Name = "productquantity1";
+            // 
+            // producttype1
+            // 
+            this.producttype1.HeaderText = "Product Type";
+            this.producttype1.Name = "producttype1";
+            // 
+            // unitprice1
+            // 
+            this.unitprice1.HeaderText = "Unit Price";
+            this.unitprice1.Name = "unitprice1";
+            // 
+            // productprice
+            // 
+            this.productprice.HeaderText = "Product Price";
+            this.productprice.Name = "productprice";
+            // 
+            // truckcost1
+            // 
+            this.truckcost1.HeaderText = "Truck Cost";
+            this.truckcost1.Name = "truckcost1";
+            // 
+            // othercost1
+            // 
+            this.othercost1.HeaderText = "Other Cost";
+            this.othercost1.Name = "othercost1";
+            // 
+            // totalcost
+            // 
+            this.totalcost.HeaderText = "Total Cost";
+            this.totalcost.Name = "totalcost";
+            // 
+            // cashreceive1
+            // 
+            this.cashreceive1.HeaderText = "Cash Paid";
+            this.cashreceive1.Name = "cashreceive1";
+            // 
+            // duebalance1
+            // 
+            this.duebalance1.HeaderText = "Due Balance";
+            this.duebalance1.Name = "duebalance1";
+            // 
+            // dueflag1
+            // 
+            this.dueflag1.HeaderText = "Due Flag";
+            this.dueflag1.Name = "dueflag1";
+            this.dueflag1.Visible = false;
             // 
             // label12
             // 
@@ -562,88 +639,11 @@
             this.pictureBox4.TabIndex = 53;
             this.pictureBox4.TabStop = false;
             // 
-            // memoid
-            // 
-            this.memoid.HeaderText = "Memo ID";
-            this.memoid.Name = "memoid";
-            // 
-            // shopid1
-            // 
-            this.shopid1.HeaderText = "Shop ID";
-            this.shopid1.Name = "shopid1";
-            this.shopid1.Visible = false;
-            // 
-            // shopname1
-            // 
-            this.shopname1.HeaderText = "Shop Name";
-            this.shopname1.Name = "shopname1";
-            // 
-            // memodate1
-            // 
-            this.memodate1.HeaderText = "Memo Date";
-            this.memodate1.Name = "memodate1";
-            // 
-            // donumber1
-            // 
-            this.donumber1.HeaderText = "D.O Number";
-            this.donumber1.Name = "donumber1";
-            // 
-            // productquantity1
-            // 
-            this.productquantity1.HeaderText = "Product Quantity";
-            this.productquantity1.Name = "productquantity1";
-            // 
-            // producttype1
-            // 
-            this.producttype1.HeaderText = "Product Type";
-            this.producttype1.Name = "producttype1";
-            // 
-            // unitprice1
-            // 
-            this.unitprice1.HeaderText = "Unit Price";
-            this.unitprice1.Name = "unitprice1";
-            // 
-            // productprice
-            // 
-            this.productprice.HeaderText = "Product Price";
-            this.productprice.Name = "productprice";
-            // 
-            // truckcost1
-            // 
-            this.truckcost1.HeaderText = "Truck Cost";
-            this.truckcost1.Name = "truckcost1";
-            // 
-            // othercost1
-            // 
-            this.othercost1.HeaderText = "Other Cost";
-            this.othercost1.Name = "othercost1";
-            // 
-            // totalcost
-            // 
-            this.totalcost.HeaderText = "Total Cost";
-            this.totalcost.Name = "totalcost";
-            // 
-            // cashreceive1
-            // 
-            this.cashreceive1.HeaderText = "Cash Paid";
-            this.cashreceive1.Name = "cashreceive1";
-            // 
-            // duebalance1
-            // 
-            this.duebalance1.HeaderText = "Due Balance";
-            this.duebalance1.Name = "duebalance1";
-            // 
-            // dueflag1
-            // 
-            this.dueflag1.HeaderText = "Due Flag";
-            this.dueflag1.Name = "dueflag1";
-            this.dueflag1.Visible = false;
-            // 
             // TruckMemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 735);
+            this.ClientSize = new System.Drawing.Size(1265, 710);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

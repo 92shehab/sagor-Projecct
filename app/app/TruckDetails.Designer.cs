@@ -32,22 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TruckDetails));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.memoid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopid1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shopname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memodate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donumber1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productquantity1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producttype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitprice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.truckcost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.othercost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalcost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cashreceive1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duebalance1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dueflag1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -67,6 +51,22 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.memoid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopid1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shopname1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memodate1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donumber1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productquantity1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producttype1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitprice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.truckcost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.othercost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalcost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cashreceive1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duebalance1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dueflag1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -126,89 +126,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1188, 390);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // memoid
-            // 
-            this.memoid.HeaderText = "Memo ID";
-            this.memoid.Name = "memoid";
-            // 
-            // shopid1
-            // 
-            this.shopid1.HeaderText = "Shop ID";
-            this.shopid1.Name = "shopid1";
-            this.shopid1.Visible = false;
-            // 
-            // shopname1
-            // 
-            this.shopname1.HeaderText = "Shop Name";
-            this.shopname1.Name = "shopname1";
-            // 
-            // memodate1
-            // 
-            this.memodate1.HeaderText = "Memo Date";
-            this.memodate1.Name = "memodate1";
-            // 
-            // donumber1
-            // 
-            this.donumber1.HeaderText = "D.O Number";
-            this.donumber1.Name = "donumber1";
-            // 
-            // productquantity1
-            // 
-            this.productquantity1.HeaderText = "Product Quantity";
-            this.productquantity1.Name = "productquantity1";
-            // 
-            // producttype1
-            // 
-            this.producttype1.HeaderText = "Product Type";
-            this.producttype1.Name = "producttype1";
-            // 
-            // unitprice1
-            // 
-            this.unitprice1.HeaderText = "Unit Price";
-            this.unitprice1.Name = "unitprice1";
-            // 
-            // productprice
-            // 
-            this.productprice.HeaderText = "Product Price";
-            this.productprice.Name = "productprice";
-            // 
-            // truckcost1
-            // 
-            this.truckcost1.HeaderText = "Truck Cost";
-            this.truckcost1.Name = "truckcost1";
-            // 
-            // othercost1
-            // 
-            this.othercost1.HeaderText = "Other Cost";
-            this.othercost1.Name = "othercost1";
-            // 
-            // totalcost
-            // 
-            this.totalcost.HeaderText = "Total Cost";
-            this.totalcost.Name = "totalcost";
-            // 
-            // cashreceive1
-            // 
-            this.cashreceive1.HeaderText = "Cash Paid";
-            this.cashreceive1.Name = "cashreceive1";
-            // 
-            // duebalance1
-            // 
-            this.duebalance1.HeaderText = "Due Balance";
-            this.duebalance1.Name = "duebalance1";
-            // 
-            // dueflag1
-            // 
-            this.dueflag1.HeaderText = "Due Flag";
-            this.dueflag1.Name = "dueflag1";
-            this.dueflag1.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.HeaderText = "Due";
-            this.button3.Name = "button3";
-            this.button3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // comboBox2
             // 
@@ -419,6 +336,89 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // memoid
+            // 
+            this.memoid.HeaderText = "Memo ID";
+            this.memoid.Name = "memoid";
+            // 
+            // shopid1
+            // 
+            this.shopid1.HeaderText = "Shop ID";
+            this.shopid1.Name = "shopid1";
+            this.shopid1.Visible = false;
+            // 
+            // shopname1
+            // 
+            this.shopname1.HeaderText = "Company Name";
+            this.shopname1.Name = "shopname1";
+            // 
+            // memodate1
+            // 
+            this.memodate1.HeaderText = "Memo Date";
+            this.memodate1.Name = "memodate1";
+            // 
+            // donumber1
+            // 
+            this.donumber1.HeaderText = "D.O Number";
+            this.donumber1.Name = "donumber1";
+            // 
+            // productquantity1
+            // 
+            this.productquantity1.HeaderText = "Product Quantity";
+            this.productquantity1.Name = "productquantity1";
+            // 
+            // producttype1
+            // 
+            this.producttype1.HeaderText = "Product Type";
+            this.producttype1.Name = "producttype1";
+            // 
+            // unitprice1
+            // 
+            this.unitprice1.HeaderText = "Unit Price";
+            this.unitprice1.Name = "unitprice1";
+            // 
+            // productprice
+            // 
+            this.productprice.HeaderText = "Product Price";
+            this.productprice.Name = "productprice";
+            // 
+            // truckcost1
+            // 
+            this.truckcost1.HeaderText = "Truck Cost";
+            this.truckcost1.Name = "truckcost1";
+            // 
+            // othercost1
+            // 
+            this.othercost1.HeaderText = "Other Cost";
+            this.othercost1.Name = "othercost1";
+            // 
+            // totalcost
+            // 
+            this.totalcost.HeaderText = "Total Cost";
+            this.totalcost.Name = "totalcost";
+            // 
+            // cashreceive1
+            // 
+            this.cashreceive1.HeaderText = "Cash Paid";
+            this.cashreceive1.Name = "cashreceive1";
+            // 
+            // duebalance1
+            // 
+            this.duebalance1.HeaderText = "Due Balance";
+            this.duebalance1.Name = "duebalance1";
+            // 
+            // dueflag1
+            // 
+            this.dueflag1.HeaderText = "Due Flag";
+            this.dueflag1.Name = "dueflag1";
+            this.dueflag1.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.HeaderText = "Due";
+            this.button3.Name = "button3";
+            this.button3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // TruckDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -480,6 +480,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Label label9;
+        private PictureBox pictureBox5;
         private DataGridViewTextBoxColumn memoid;
         private DataGridViewTextBoxColumn shopid1;
         private DataGridViewTextBoxColumn shopname1;
@@ -496,6 +497,5 @@
         private DataGridViewTextBoxColumn duebalance1;
         private DataGridViewTextBoxColumn dueflag1;
         private DataGridViewTextBoxColumn button3;
-        private PictureBox pictureBox5;
     }
 }

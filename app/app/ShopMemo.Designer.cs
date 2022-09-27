@@ -266,7 +266,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Ivory;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(427, 677);
+            this.button1.Location = new System.Drawing.Point(428, 640);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 32);
             this.button1.TabIndex = 19;
@@ -351,7 +351,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(577, 222);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(657, 487);
+            this.dataGridView1.Size = new System.Drawing.Size(657, 445);
             this.dataGridView1.TabIndex = 23;
             // 
             // memoid
