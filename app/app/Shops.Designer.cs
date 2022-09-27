@@ -47,7 +47,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(32, 184);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 41);
+            this.button1.Size = new System.Drawing.Size(144, 51);
             this.button1.TabIndex = 0;
             this.button1.Text = "Register Shop";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(200, 184);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 41);
+            this.button2.Size = new System.Drawing.Size(144, 51);
             this.button2.TabIndex = 1;
             this.button2.Text = "Shop Memo";
             this.button2.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(369, 184);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 41);
+            this.button3.Size = new System.Drawing.Size(144, 51);
             this.button3.TabIndex = 2;
             this.button3.Text = "Shop Details";
             this.button3.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 260);
+            this.ClientSize = new System.Drawing.Size(559, 277);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

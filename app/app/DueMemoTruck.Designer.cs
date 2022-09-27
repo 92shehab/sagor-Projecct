@@ -81,7 +81,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 32);
             this.button1.TabIndex = 28;
-            this.button1.Text = "Collect";
+            this.button1.Text = "Paid";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -111,9 +111,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(60, 274);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 21);
+            this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Due Receive";
+            this.label2.Text = "Due Paid";
             // 
             // label4
             // 
@@ -206,9 +206,9 @@
             this.label13.ForeColor = System.Drawing.Color.Green;
             this.label13.Location = new System.Drawing.Point(103, 188);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 21);
+            this.label13.Size = new System.Drawing.Size(77, 21);
             this.label13.TabIndex = 39;
-            this.label13.Text = "Cash Received";
+            this.label13.Text = "Cash Paid";
             // 
             // pictureBox3
             // 

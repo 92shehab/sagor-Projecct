@@ -67,6 +67,7 @@ namespace app
             {
 
                 throw;
+                //MessageBox.Show(e.ToString());
             }
         }
     }

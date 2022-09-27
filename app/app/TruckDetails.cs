@@ -62,10 +62,18 @@ namespace app
             comboBox1.Items.Add("Paid");  //1
             comboBox1.Items.Add("Due");     //2
 
-            //  shop name 
-            if (comboBox2.Items != null)
+            try
             {
-                comboBox2.SelectedIndex = 1;
+                //  shop name 
+                if (comboBox2.Items != null)
+                {
+                    comboBox2.SelectedIndex = 1;
+                }
+            }
+            catch (Exception)
+            {
+
+                
             }
 
             // search by
@@ -136,7 +144,7 @@ namespace app
                 {
 
 
-                    DialogResult dr = MessageBox.Show("Are you sure you want to Collect Due Amount ?", "Confirmation", MessageBoxButtons.YesNo);
+                    DialogResult dr = MessageBox.Show("Are you sure you want to Paid Due Amount ?", "Confirmation", MessageBoxButtons.YesNo);
                     if (dr == DialogResult.Yes)
                     {
                         if (dataGridView1.CurrentCell != null && dataGridView1.CurrentCell.Value != null)
@@ -189,7 +197,51 @@ namespace app
                
         }
 
-     
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to delete Selected Memo ?", "Confirmation", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                //delete row from database or datagridview...
+                try
+                {
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        string id = row.Cells[0].Value.ToString();
+                        MessageBox.Show("Memo : " +id.ToString()+ " Will delete ! ");
+                        DeleteData(sqlite_conn, id);
+                        this.dataGridView1.Rows.Clear();
+                        ReadData(sqlite_conn);
+
+                    }
+
+                  
+
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            else if (DialogResult == DialogResult.No)
+            {
+                //Nothing to do
+            }
+        }
+
+        public void DeleteData(SQLiteConnection conn, string id)
+        {
+
+            //shopname = this.textBox1.Text;
+
+
+            SQLiteCommand sqlite_cmd;
+            sqlite_cmd = conn.CreateCommand();
+            sqlite_cmd.CommandText = "DELETE FROM TruckMemo WHERE MemoId = '" + id + "'"; 
+            sqlite_cmd.ExecuteNonQuery();
+        }
 
         public void ReadDataForCombobox(SQLiteConnection conn)
         {
@@ -215,7 +267,10 @@ namespace app
             duecolumn.ToolTipText =
                 "Paid = 0 Due = 1";
 
+
             
+
+
 
         }
 
@@ -446,6 +501,8 @@ namespace app
                 counter += counter;
 
 
+              
+
 
 
 
@@ -456,14 +513,27 @@ namespace app
 
                 totalMemotext = totalMemotext +1;
                 totalQuantitytext = totalQuantitytext + Convert.ToDouble(sqlite_datareader.GetValue(5).ToString());
-                totalCosttext = totalQuantitytext + Convert.ToDouble(sqlite_datareader.GetValue(11).ToString());    
+                totalCosttext = totalCosttext + Convert.ToDouble(sqlite_datareader.GetValue(11).ToString());    
                 totalCashreceivedtext = totalCashreceivedtext + Convert.ToDouble(sqlite_datareader.GetValue(12).ToString());
+
+
+
+
+                dataGridView1.Rows[counter].Cells[5].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[8].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[9].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[10].Style.BackColor = Color.LightGoldenrodYellow;
+
+                dataGridView1.Rows[counter].Cells[11].Style.BackColor = Color.LightBlue;
+                dataGridView1.Rows[counter].Cells[12].Style.BackColor = Color.LightGreen;
+                dataGridView1.Rows[counter].Cells[13].Style.BackColor = Color.LightPink;
+
 
                 double due = Convert.ToDouble(sqlite_datareader.GetValue(13).ToString());
                 if (due > 0)
                 {
                     totalDuebalancetext = totalDuebalancetext + due;
-                    dataGridView1.Rows[counter].Cells[15].Value = "Collect";
+                    dataGridView1.Rows[counter].Cells[15].Value = "Paid";
 
                     
 
@@ -481,12 +551,15 @@ namespace app
 
                 //dataGridView1.Rows[Index].Visible = false;  
 
+                
+               
+
             }
 
             label7.Text = "Total Memo : " + totalMemotext;
             label4.Text = "Total Product Quantity : " + totalQuantitytext;
             label6.Text = "Total Cost : " + totalCosttext;
-            label5.Text = "Total Cash Received : " + totalCashreceivedtext;
+            label5.Text = "Total Cash Paid : " + totalCashreceivedtext;
             label8.Text = "Total Due Balance :  : " + totalDuebalancetext;
 
             label9.Text = "( Special : " + Special + " Popular : " + Popular + " OPC : " + OPC + " )";

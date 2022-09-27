@@ -82,9 +82,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sheha\\source\\repos\\app\\app\\app.csproj",
-      "projectName": "app",
-      "projectPath": "C:\\Users\\sheha\\source\\repos\\app\\app\\app.csproj",
+      "projectUniqueName": "C:\\Users\\sheha\\source\\repos\\app\\app\\SA TRADERS.csproj",
+      "projectName": "SA TRADERS",
+      "projectPath": "C:\\Users\\sheha\\source\\repos\\app\\app\\SA TRADERS.csproj",
       "packagesPath": "C:\\Users\\sheha\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\sheha\\source\\repos\\app\\app\\obj\\",
       "projectStyle": "PackageReference",

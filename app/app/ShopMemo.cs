@@ -524,12 +524,12 @@ namespace app
             
             sqlite_datareader = sqlite_cmd.ExecuteReader();
 
-         
 
+            int counter = 0;
             while (sqlite_datareader.Read())
             {
-               
 
+                counter += counter;
                 dataGridView1.Rows.Insert(0, sqlite_datareader.GetValue(0), sqlite_datareader.GetValue(1), sqlite_datareader.GetString(2), sqlite_datareader.GetString(3), sqlite_datareader.GetString(4), sqlite_datareader.GetValue(5), sqlite_datareader.GetString(6), sqlite_datareader.GetValue(7), sqlite_datareader.GetValue(8), sqlite_datareader.GetValue(9), sqlite_datareader.GetValue(10), sqlite_datareader.GetValue(11), sqlite_datareader.GetValue(12), sqlite_datareader.GetValue(13), sqlite_datareader.GetValue(14));
 
 
@@ -537,6 +537,19 @@ namespace app
                 totalQuantitytext = totalQuantitytext + Convert.ToDouble(sqlite_datareader.GetValue(5).ToString());
                 totalCosttext = totalCosttext + Convert.ToDouble(sqlite_datareader.GetValue(11).ToString());
                 totalCashreceivedtext = totalCashreceivedtext + Convert.ToDouble(sqlite_datareader.GetValue(12).ToString());
+
+
+
+                dataGridView1.Rows[counter].Cells[5].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[8].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[9].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[10].Style.BackColor = Color.LightGoldenrodYellow;
+
+                dataGridView1.Rows[counter].Cells[11].Style.BackColor = Color.LightBlue;
+                dataGridView1.Rows[counter].Cells[12].Style.BackColor = Color.LightGreen;
+                dataGridView1.Rows[counter].Cells[13].Style.BackColor = Color.LightPink;
+
+
                 double due = Convert.ToDouble(sqlite_datareader.GetValue(13).ToString());
                 if (due > 0)
                 {

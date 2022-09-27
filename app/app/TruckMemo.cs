@@ -78,7 +78,7 @@ namespace app
             }*/
             //comboBox2.SelectedIndex = 0;
 
-            label15.Text = "Total Cost" + " - " + " Cash Received " ;
+            label15.Text = "Total Cost" + " - " + " Cash Paid " ;
             label16.Text = "Product Price " + " + " + " Trruck Cost " + " + " + " Other Cost " ;
             label17.Text = "Quantity " + " * " + " Unit Price " ;
 
@@ -525,12 +525,12 @@ namespace app
             
             sqlite_datareader = sqlite_cmd.ExecuteReader();
 
-            
-            
+
+            int counter = 0;
             while (sqlite_datareader.Read())
             {
-               
 
+                counter += counter;
                 dataGridView1.Rows.Insert(0, sqlite_datareader.GetValue(0), sqlite_datareader.GetValue(1), sqlite_datareader.GetString(2), sqlite_datareader.GetString(3), sqlite_datareader.GetString(4), sqlite_datareader.GetValue(5), sqlite_datareader.GetString(6), sqlite_datareader.GetValue(7), sqlite_datareader.GetValue(8), sqlite_datareader.GetValue(9), sqlite_datareader.GetValue(10), sqlite_datareader.GetValue(11), sqlite_datareader.GetValue(12), sqlite_datareader.GetValue(13), sqlite_datareader.GetValue(14));
 
 
@@ -539,6 +539,20 @@ namespace app
                 totalCosttext = totalCosttext + Convert.ToDouble(sqlite_datareader.GetValue(11).ToString());
                 totalCashreceivedtext = totalCashreceivedtext + Convert.ToDouble(sqlite_datareader.GetValue(12).ToString());
                 double due = Convert.ToDouble(sqlite_datareader.GetValue(13).ToString());
+
+
+
+                dataGridView1.Rows[counter].Cells[5].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[8].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[9].Style.BackColor = Color.LightGoldenrodYellow;
+                dataGridView1.Rows[counter].Cells[10].Style.BackColor = Color.LightGoldenrodYellow;
+
+                dataGridView1.Rows[counter].Cells[11].Style.BackColor = Color.LightBlue;
+                dataGridView1.Rows[counter].Cells[12].Style.BackColor = Color.LightGreen;
+                dataGridView1.Rows[counter].Cells[13].Style.BackColor = Color.LightPink;
+
+
+
                 if (due > 0)
                 {
                     totalDuebalancetext = totalDuebalancetext + due;
@@ -558,7 +572,7 @@ namespace app
             label22.Text = "Total Memo : " + totalMemotext;
             label26.Text = "Total Product Quantity : " + totalQuantitytext + " ( Special : " + Special + " Popular : " + Popular + " OPC : " + OPC + " )";
             label23.Text = "Total Cost : " + totalCosttext;
-            label25.Text = "Total Cash Received : " + totalCashreceivedtext;
+            label25.Text = "Total Cash Paid : " + totalCashreceivedtext;
             label24.Text = "Total Due Balance :  : " + totalDuebalancetext;
 
         }

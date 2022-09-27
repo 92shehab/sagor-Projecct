@@ -73,38 +73,48 @@ namespace app
         private void button1_Click(object sender, EventArgs e)
         {
 
-            duecolelct = Convert.ToDouble(textBox1.Text.ToString());
-            double duebalanced;
-            double cashr;
-            double.TryParse(duebalance, out duebalanced);
-            double.TryParse(cashreceived, out cashr);
-
-            double dueb = duebalanced - duecolelct;
-            cashr = cashr + duecolelct;
-            if (dueb <= 0)
+            try
             {
-                // 0 no due
-                dueflag = 0;
+                duecolelct = Convert.ToDouble(textBox1.Text.ToString());
+                double duebalanced;
+                double cashr;
+                double.TryParse(duebalance, out duebalanced);
+                double.TryParse(cashreceived, out cashr);
 
+                double dueb = duebalanced - duecolelct;
+                cashr = cashr + duecolelct;
+                if (dueb <= 0)
+                {
+                    // 0 no due
+                    dueflag = 0;
+
+                }
+
+                else
+                {
+                    // 1 due 
+                    dueflag = 1;
+                }
+
+                if (dueb < 0)
+                {
+                    dueb = 0;
+                }
+
+                dueb = Math.Round(dueb, 2);
+                Debug.WriteLine(duecolelct);
+                SQLiteCommand sqlite_cmd;
+                sqlite_cmd = sqlite_conn.CreateCommand();
+                sqlite_cmd.CommandText = "UPDATE ShopMemo SET DueBalance = '" + dueb + "', CashReceived = '" + cashr + "', DueFlag = '" + dueflag + "' WHERE MemoId = '" + memoid + "'";
+                sqlite_cmd.ExecuteNonQuery();
+                Debug.WriteLine("ddone");
+                this.Dispose();
             }
+            catch (Exception)
+            {
 
-            else {
-                // 1 due 
-                dueflag = 1;
+                
             }
-
-            if (dueb<0) {
-                dueb = 0;
-            }
-
-            dueb = Math.Round(dueb, 2);
-            Debug.WriteLine(duecolelct);
-            SQLiteCommand sqlite_cmd;
-            sqlite_cmd = sqlite_conn.CreateCommand();
-            sqlite_cmd.CommandText = "UPDATE ShopMemo SET DueBalance = '" + dueb + "', CashReceived = '" + cashr + "', DueFlag = '" + dueflag + "' WHERE MemoId = '" + memoid + "'";
-            sqlite_cmd.ExecuteNonQuery();
-            Debug.WriteLine("ddone");
-            this.Dispose();
 
         }
 

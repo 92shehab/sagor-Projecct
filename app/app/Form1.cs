@@ -17,7 +17,7 @@ namespace app
         public Form1()
         {
             InitializeComponent();
-            this.Text = "SN Traders";
+            this.Text = "SA Traders";
             this.MaximizeBox = false;
             Debug.WriteLine("Test");
 
@@ -37,8 +37,8 @@ namespace app
 
             
             Register(sqlite_conn);
-            
-            
+            password.UseSystemPasswordChar = true;
+
             //InsertData(sqlite_conn);
             //ReadData(sqlite_conn);
 
@@ -218,6 +218,17 @@ namespace app
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                button2_Click(sender, e);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
